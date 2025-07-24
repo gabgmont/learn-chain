@@ -1,0 +1,21 @@
+[package]
+name = "pallet-playground"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+frame-support = { workspace = true, default-features = false }
+frame-system = { workspace = true, default-features = false }
+codec = { features = ["derive"], workspace = true }
+scale-info = { features = ["derive"], workspace = true }
+sp-runtime = { workspace = true, default-features = false }
+
+[features]
+default = ["std"]
+std = [
+  "frame-support/std",
+  "frame-system/std",
+  "codec/std",
+  "scale-info/std",
+  "sp-runtime/std",
+]

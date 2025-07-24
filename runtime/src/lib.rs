@@ -166,6 +166,9 @@ mod runtime {
 	/// A minimal pallet template.
 	#[runtime::pallet_index(5)]
 	pub type Template = pallet_minimal_template::Pallet<Runtime>;
+	
+	#[runtime::pallet_index(6)]
+	pub type Playground = pallet_playground::Pallet<Runtime>;
 }
 
 parameter_types! {
@@ -207,6 +210,10 @@ impl pallet_transaction_payment::Config for Runtime {
 
 // Implements the types required for the template pallet.
 impl pallet_minimal_template::Config for Runtime {}
+
+impl pallet_playground::Config for Runtime {
+	type WeightInfo = ();
+}
 
 type Block = frame::runtime::types_common::BlockOf<Runtime, TxExtension>;
 type Header = HeaderFor<Runtime>;
