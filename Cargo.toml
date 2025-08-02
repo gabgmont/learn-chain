@@ -31,7 +31,6 @@ serde_json = { version = "1.0.132", default-features = false }
 
 frame-support = { version = "41.0.0", default-features = false }
 frame-system = { version = "41.0.0", default-features = false }
-
 sp-runtime = { version = "42.0.0", default-features = false }
 
 [profile.release]
